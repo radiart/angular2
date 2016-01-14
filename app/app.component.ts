@@ -1,10 +1,10 @@
 import { Component } from 'angular2/core';
 
+// Hero
 interface Hero {
     id: number;
     name: string;
 }
-
 
 public hero: Hero = {
     id: 1,
@@ -20,11 +20,14 @@ public hero: Hero = {
       <div><label>id: </label>{{hero.id}}</div>
       <div>
         <label>name: </label>
-        <div><input value="{{ hero.name }}" placeholder="name"></div>
+        <div>
+            <input [(ngModel)]="hero.name" placeholder="name">
+        </div>
       </div>
       `
 })
 
+// App
 export class AppComponent {
     public title = "Tour of Heros";
     public hero = Hero;
