@@ -1,4 +1,11 @@
-import { bootstrap } from 'angular2/platform/browser';
-import { AppComponent } from './app.component';
+import { bootstrap } from 'angular2/platform/browser'; // Angular Bootstrap
+import { ROUTER_PROVIDERS } from 'angular2/router';    // Angular Router
 
-bootstrap( AppComponent );
+import { AppComponent } from './app.component';    // App Component
+import { HeroService } from './hero.service';      // Hero Service
+
+
+bootstrap( AppComponent, [
+    ROUTER_PROVIDERS,
+    HeroService
+]);
